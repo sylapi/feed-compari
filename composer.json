@@ -1,0 +1,29 @@
+{
+    "name": "sylapi/feed-compari",
+    "description": "Compari merchant feeds",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.0.0",
+        "sylapi/feeds": "^0.1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "phpstan/phpstan": "^0.12.77"        
+    },
+    "autoload": {
+        "psr-4": { 
+            "Sylapi\\Feeds\\Compari\\" : "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": { "Sylapi\\Feeds\\Compari\\Tests\\": "tests/" }
+    },
+    "scripts": {
+        "tests": "vendor/bin/phpunit",
+        "phpstan": "vendor/bin/phpstan analyse src tests",
+        "coverage": "XDEBUG_MODE=coverage  vendor/bin/phpunit --verbose --coverage-text",
+        "coverage-html": "XDEBUG_MODE=coverage  vendor/bin/phpunit --coverage-html ./coverage/"
+    },
+    "prefer-stable": true        
+}

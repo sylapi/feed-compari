@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product>
+  <Identifier>id-1234567890</Identifier>
+  <Name>Product title</Name>
+  <Description>Product description...</Description>
+  <ProductUrl>https://url.exmaple.com/products/id-1234567890/</ProductUrl>
+  <ImageUrl>https://url.exmaple.com/storage/images/products/id-1234567890/main.jpg</ImageUrl>
+  <Price>9.95</Price>
+  <Category>Calculatoare&gt;Laptop</Category>
+  <Manufacturer>Brand XYZ</Manufacturer>
+  <EanCode>9876543210</EanCode>
+  <DeliveryTime>4</DeliveryTime>
+  <DeliveryCost>12.22 RON</DeliveryCost>
+  <Attributes>
+    <Attribute>
+      <Attribute_name>Param 0</Attribute_name>
+      <Attribute_value>Value 0</Attribute_value>
+    </Attribute>
+    <Attribute>
+      <Attribute_name>Param 1</Attribute_name>
+      <Attribute_value>Value 1</Attribute_value>
+    </Attribute>
+    <Attribute>
+      <Attribute_name>Param 2</Attribute_name>
+      <Attribute_value>Value 2</Attribute_value>
+    </Attribute>
+    <Attribute>
+      <Attribute_name>Param 3</Attribute_name>
+      <Attribute_value>Value 3</Attribute_value>
+    </Attribute>
+  </Attributes>
+</product>
