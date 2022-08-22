@@ -63,10 +63,25 @@ class Product implements ProductSerializer
 
     /**
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
+     * @Serializer\SerializedName("Net_price")
+     * @Serializer\Exclude(if = "object.getNetSalePrice() != null")
+     */
+    private $netPrice;    
+
+    /**
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("Price")
      * @Serializer\XmlElement(cdata=false)
      */
     private $salePrice;
+
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("Net_price")
+     * @Serializer\XmlElement(cdata=false)
+     */
+    private $netSalePrice;    
 
     /**
      * @Serializer\Type("string")
@@ -245,6 +260,26 @@ class Product implements ProductSerializer
     }
 
     /**
+     * Get the value of price
+     */ 
+    public function getNetPrice()
+    {
+        return $this->netPrice;
+    }
+
+    /**
+     * Set the value of price
+     *
+     * @return  self
+     */ 
+    public function setNetPrice($netPrice)
+    {
+        $this->netPrice = $netPrice;
+
+        return $this;
+    }    
+
+    /**
      * Get the value of salePrice
      */ 
     public function getSalePrice()
@@ -263,6 +298,26 @@ class Product implements ProductSerializer
 
         return $this;
     }
+
+    /**
+     * Get the value of salePrice
+     */ 
+    public function getNetSalePrice()
+    {
+        return $this->netSalePrice;
+    }
+
+    /**
+     * Set the value of salePrice
+     *
+     * @return  self
+     */ 
+    public function setNetSalePrice($netSalePrice)
+    {
+        $this->netSalePrice = $netSalePrice;
+
+        return $this;
+    }    
 
     /**
      * Get the value of productCategory
